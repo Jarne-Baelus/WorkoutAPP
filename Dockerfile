@@ -5,5 +5,5 @@ RUN dotnet publish -c release -o /app
 
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS final
 WORKDIR /App
-COPY --from=build /App ./
-ENTRYPOINT ["dotnet", "CICDWebApplication.dll"]
+COPY --from=build /project ./
+ENTRYPOINT ["dotnet", "project.dll"]
