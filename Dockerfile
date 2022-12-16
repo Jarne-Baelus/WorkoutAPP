@@ -4,6 +4,6 @@ COPY ./project/ ./
 RUN dotnet publish -c release -o /app
 
 FROM mcr.microsoft.com/dotnet/aspnet:3.1
-WORKDIR /App
-COPY --from=build /App./
+WORKDIR /app
+COPY --from=build /app./
 ENTRYPOINT ["dotnet", "project.dll"]
