@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.13.1",
+    "contentful": "^9.2.13",
+    "contentful-management": "^10.23.0",
+    "tsc": "^2.0.4",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "vite-plugin-cdn-import": "^0.3.5"
+  }
+}

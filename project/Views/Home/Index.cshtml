@@ -1,0 +1,38 @@
+﻿@using Contentful.Core.Models
+@model ContentfulCollection<Workouts>
+
+<head>
+
+</head>
+
+@{
+    ViewData["Title"] = "HomePage";
+    
+}
+
+<h1>Workout generator!</h1>
+<form method="post">
+<label for="html">Enter the amount of days you want to workout</label><br>
+<div class="slidecontainer">
+  <input oninput="readdays()" name="days" type="range" min="2" max="6" value="4" class="daysslider" id="days">
+</div>
+<div id="dayscounter"></div>
+<label for="html">How long do you want to work out every day ? (minutes)</label><br>
+<div class="slidecontainer">
+  <input oninput="readminutes()" name="time" step="10" type="range" min="30" max="50" value="40" class="minutesslider" id="time">
+</div>
+<div id="minutescounter"></div>
+<input type="submit" value="Submit" id="submit">
+</form>
+
+
+
+<!-- @foreach (var Workouts in Model) {
+    
+        <h1>@Workouts.type</h1>
+        <h3>@Workouts.musclesused</h3>
+        @for (int i = 0; i < @Workouts.exercises.Count; i++){
+            <h3>@Workouts.exercises[i]</h3>
+        }
+        }
+-->

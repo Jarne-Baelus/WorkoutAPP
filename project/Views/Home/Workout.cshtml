@@ -1,0 +1,216 @@
+@using Contentful.Core.Models
+@model ContentfulCollection<Workouts>
+
+@{
+    int days = @ViewBag.program.Amountofdays;
+    int time = @ViewBag.program.Time;
+    Console.WriteLine(days);
+    ViewBag.Title = "Workout";
+    Console.WriteLine();
+    bool day1 = false;
+    bool day2 = false;
+    bool day3 = false;
+    bool day4 = false;
+    bool day5 = false;
+    bool day6 = false;
+    bool day7 = false;
+
+    string type1 = "";
+    string type2 = "";
+    string type3 = "";
+    string type4 = "";
+    string type5 = "";
+    string type6 = "";
+    string type7 = "";
+
+    if (days == 2) {
+        day1 = true;
+        day3 = true;
+        type1 = "push";
+        type3 = "pull";
+    }
+    else if (days == 3) {
+        day1 = true;
+        day3 = true;
+        day6 = true;
+        type1 = "push";
+        type3 = "pull";
+        type6 = "legs";
+    }
+    else if (days == 4) {
+        day1 = true;
+        day3 = true;
+        day5 = true;
+        day7 = true;
+        type1 = "push";
+        type3 = "pull";
+        type6 = "legs";
+        type7 = "push";
+    }
+    else if (days == 5) {
+        day1 = true;
+        day2 = true;
+        day3 = true;
+        day5 = true;
+        day6 = true;
+        type1 = "push";
+        type2 = "pull";
+        type3 = "legs";
+        type5 = "push";
+        type6 = "pull";
+    }
+    else if (days == 6) {
+        day1 = true;
+        day2 = true;
+        day3 = true;
+        day4 = true;
+        day3 = true;
+        day5 = true;
+        day6 = true;
+        type1 = "push";
+        type2 = "pull";
+        type3 = "legs";
+        type4 = "push";
+        type5 = "pull";
+        type6 = "legs";
+    }
+    Console.WriteLine(day1);
+    Console.WriteLine(day2);
+    Console.WriteLine(day3);
+    Console.WriteLine(day4);
+    Console.WriteLine(day5);
+    Console.WriteLine(day6);
+    Console.WriteLine(day7);
+}
+
+<h1>Monday</h1>
+@if(day1) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+<h1>Tuesday</h1>
+@if(day2) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+<h1>Wednesday</h1>
+@if(day3) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+<h1>Thursday</h1>
+@if(day4) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+<h1>Friday</h1>
+@if(day5) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+<h1>Saturday</h1>
+@if(day6) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+<h1>Sunday</h1>
+@if(day7) {
+    @foreach (var Workouts in Model) {
+        if (@Workouts.type == type1) {
+            <h3>@Workouts.type day</h3>
+            <h3>Muscles used: @Workouts.musclesused</h3>
+            <h3>Exercises:</h3>
+            <ul>
+            @for (int i = 0; i < time/10; i++){
+            <li><h4>@Workouts.exercises[i]</h4></li>
+            }
+        </ul>
+        }
+    }
+}
+else {
+    <h4>Rustdag</h4>
+}
+
+
+
+
+<a href="/">go back</a>
